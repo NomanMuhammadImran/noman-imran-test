@@ -964,7 +964,7 @@
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid d-flex">
             <!-- Sidebar -->
             <aside class="sidebar collapsed">
                 <!-- Sidebar header -->
@@ -1039,70 +1039,6 @@
                     </button>
                 </div>
             </aside>
-            <!-- Sidebar Menu -->
-            <!-- <div class="sidebar">
-                <div class="sidebar-icon">
-                    <i class="fas fa-anchor"></i>
-                </div>
-
-                <ul class="sidebar-menu">
-                    <li class="active"><i class="fas fa-home"></i> <span>Dashboard</span></li>
-                    <li><i class="fas fa-chart-line"></i> <span>Analytics</span></li>
-                    <li><i class="fas fa-file-invoice"></i> <span>Invoices</span></li>
-                    <li><i class="fas fa-users"></i> <span>Clients</span></li>
-                    <li><i class="fas fa-folder"></i> <span>Files</span></li>
-                    <li><i class="fas fa-cog"></i> <span>Settings</span></li>
-                </ul>
-
-                <div class="sidebar-spacer"></div>
-            </div> -->
-
-            <!-- Profile Panel (Always Visible) -->
-            <div class="profile-panel">
-                <div class="profile-img">
-                    <i class="fas fa-user"></i>
-                </div>
-
-                <div class="profile-name">Max Hollaway</div>
-                <div class="profile-role">339 Fill x 35</div>
-
-                <div class="profile-buttons">
-                    <button class="profile-btn primary">Add Phone</button>
-                    <button class="profile-btn secondary">Edit Phone</button>
-                </div>
-
-                <div class="profile-info">
-                    <i class="fas fa-phone"></i>
-                    <span>+423 (555) 0927</span>
-                </div>
-                <div class="profile-info">
-                    <i class="fas fa-mobile"></i>
-                    <span>Mobile Phone #2</span>
-                </div>
-                <div class="profile-info">
-                    <i class="fas fa-envelope"></i>
-                    <span>userymail.com</span>
-                </div>
-                <div class="profile-info link">
-                    <i class="fas fa-plus"></i>
-                    <span>Add new Email</span>
-                </div>
-
-                <div class="profile-section-divider">
-                    <div class="personal-info-header">
-                        <label>Personal Info</label>
-                        <input type="checkbox" class="toggle-checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="tags-section">
-                    <span class="tag">#service-hours</span>
-                    <span class="tag">#internet-appointment</span>
-                    <span class="tag">#service-roaming</span>
-                    <span class="tag">#interested-in-single</span>
-                </div>
-            </div>
-
             <!-- Main Content -->
             <div class="main-content">
                 <!-- Header -->
@@ -1123,148 +1059,196 @@
                     </div>
                 </div>
 
-                <!-- Tabs -->
-                <div class="tabs-container">
-                    <div class="tab-item"><i class="tab-icon fas fa-user"></i> Profile</div>
-                    <div class="tab-item"><i class="tab-icon fas fa-sticky-note"></i> Notes</div>
-                    <div class="tab-item"><i class="tab-icon fas fa-comment"></i> Communication</div>
-                    <div class="tab-item"><i class="tab-icon fas fa-dumbbell"></i> Workouts</div>
-                    <div class="tab-item"><i class="tab-icon fas fa-calendar"></i> Attendance</div>
-                    <div class="tab-item active"><i class="tab-icon fas fa-file-invoice"></i> Invoice</div>
-                    <div class="tab-item"><i class="tab-icon fas fa-star"></i> Ranks</div>
+                <div class="d-flex">
+                    <div class="profile-panel">
+                        <div class="profile-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+    
+                        <div class="profile-name">Max Hollaway</div>
+                        <div class="profile-role">339 Fill x 35</div>
+    
+                        <div class="profile-buttons">
+                            <button class="profile-btn primary">Add Phone</button>
+                            <button class="profile-btn secondary">Edit Phone</button>
+                        </div>
+    
+                        <div class="profile-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+423 (555) 0927</span>
+                        </div>
+                        <div class="profile-info">
+                            <i class="fas fa-mobile"></i>
+                            <span>Mobile Phone #2</span>
+                        </div>
+                        <div class="profile-info">
+                            <i class="fas fa-envelope"></i>
+                            <span>userymail.com</span>
+                        </div>
+                        <div class="profile-info link">
+                            <i class="fas fa-plus"></i>
+                            <span>Add new Email</span>
+                        </div>
+    
+                        <div class="profile-section-divider">
+                            <div class="personal-info-header">
+                                <label>Personal Info</label>
+                                <input type="checkbox" class="toggle-checkbox" checked>
+                            </div>
+                        </div>
+    
+                        <div class="tags-section">
+                            <span class="tag">#service-hours</span>
+                            <span class="tag">#internet-appointment</span>
+                            <span class="tag">#service-roaming</span>
+                            <span class="tag">#interested-in-single</span>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Tabs -->
+                        <div class="tabs-container">
+                            <div class="tab-item"><i class="tab-icon fas fa-user"></i> Profile</div>
+                            <div class="tab-item"><i class="tab-icon fas fa-sticky-note"></i> Notes</div>
+                            <div class="tab-item"><i class="tab-icon fas fa-comment"></i> Communication</div>
+                            <div class="tab-item"><i class="tab-icon fas fa-dumbbell"></i> Workouts</div>
+                            <div class="tab-item"><i class="tab-icon fas fa-calendar"></i> Attendance</div>
+                            <div class="tab-item active"><i class="tab-icon fas fa-file-invoice"></i> Invoice</div>
+                            <div class="tab-item"><i class="tab-icon fas fa-star"></i> Ranks</div>
+                        </div>
+                        <!-- Content -->
+                        <div class="content">
+                            <!-- Stats Cards -->
+                            <div class="stats-grid">
+                                <div class="stat-card email-sent">
+                                    <div class="stat-label">Email Sent</div>
+                                    <div class="stat-value">6</div>
+                                    <div class="stat-change">Last 30</div>
+                                    <button class="stat-toggle"></button>
+                                </div>
+                                <div class="stat-card appointment">
+                                    <div class="stat-label">Appointment Booked</div>
+                                    <div class="stat-value">0</div>
+                                    <div class="stat-change">Last 30</div>
+                                    <button class="stat-toggle inactive"></button>
+                                </div>
+                                <div class="stat-card attendance">
+                                    <div class="stat-label">Total Attendance</div>
+                                    <div class="stat-value">81</div>
+                                    <div class="stat-change">Last 30</div>
+                                    <button class="stat-toggle inactive"></button>
+                                </div>
+                                <div class="stat-card tasks">
+                                    <div class="stat-label">Tasks</div>
+                                    <div class="stat-value">3</div>
+                                    <div class="stat-change">Last 30</div>
+                                    <button class="stat-toggle inactive"></button>
+                                </div>
+                                <div class="stat-card invoices">
+                                    <div class="stat-label">Invoices</div>
+                                    <div class="stat-value">3</div>
+                                    <div class="stat-change">Last 30</div>
+                                    <button class="stat-toggle inactive"></button>
+                                </div>
+                            </div>
+        
+                            <!-- Invoice Section Header -->
+                            <div class="invoice-section-header">
+                                <div class="section-title">Invoices / Payments (0 Invoices)</div>
+                                <button class="btn-payment">
+                                    <i class="fas fa-check"></i> Post Payments
+                                </button>
+                            </div>
+        
+                            <!-- Filter Buttons -->
+                            <div class="filter-buttons">
+                                <button class="filter-btn active">All status</button>
+                                <button class="filter-btn">Only Paid</button>
+                                <button class="filter-btn">Only Paid</button>
+                            </div>
+        
+                            <!-- Invoice Table -->
+                            <table class="invoice-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Invoice Summary</th>
+                                        <th>Payments</th>
+                                        <th>Amount Paid</th>
+                                        <th>Amount Owed</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="invoice-date">12/17/2024</div>
+                                            <div class="invoice-date">11:23am</div>
+                                        </td>
+                                        <td>
+                                            <div class="invoice-details">Qty 1: Sparring Gloves</div>
+                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
+                                            <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
+                                            <div class="invoice-details-small">Payments</div>
+                                            <div class="invoice-details-small">CC Terminal 10/2/2024 - Amt $255.44</div>
+                                        </td>
+                                        <td></td>
+                                        <td class="amount">$355.68</td>
+                                        <td class="amount">$0.00</td>
+                                        <td><button class="view-btn">View</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="invoice-date">12/17/2024</div>
+                                            <div class="invoice-date">04:30am</div>
+                                        </td>
+                                        <td>
+                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
+                                            <div class="invoice-details-small">No payments found</div>
+                                        </td>
+                                        <td></td>
+                                        <td class="amount">$0.00</td>
+                                        <td class="amount">$21.67</td>
+                                        <td><button class="view-btn">View</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="invoice-date">12/10/2024</div>
+                                            <div class="invoice-date">03:51am</div>
+                                        </td>
+                                        <td>
+                                            <div class="invoice-details">Qty 1: Century Mouth Guard: Black</div>
+                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
+                                            <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
+                                            <div class="invoice-details-small">Payments</div>
+                                            <div class="invoice-details-small">CC Terminal 10/10/2024 - Amt $276.36</div>
+                                        </td>
+                                        <td></td>
+                                        <td class="amount">$331.11</td>
+                                        <td class="amount">$0.00</td>
+                                        <td><button class="view-btn">View</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+        
+                            <!-- Pagination -->
+                            <div class="pagination-section">
+                                <div class="pagination-info">
+                                    <span>Total Rows: <strong>8272.28</strong></span>
+                                    <span>Total Owed: <strong>21.67</strong></span>
+                                </div>
+                                <div class="pagination-controls">
+                                    <span class="pagination-nav">Prev</span>
+                                    <button class="pagination-btn">1</button>
+                                    <button class="pagination-btn active">2</button>
+                                    <button class="pagination-btn">3</button>
+                                    <button class="pagination-btn">10</button>
+                                    <span class="pagination-nav">Next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Content -->
-                <div class="content">
-                    <!-- Stats Cards -->
-                    <div class="stats-grid">
-                        <div class="stat-card email-sent">
-                            <div class="stat-label">Email Sent</div>
-                            <div class="stat-value">6</div>
-                            <div class="stat-change">Last 30</div>
-                            <button class="stat-toggle"></button>
-                        </div>
-                        <div class="stat-card appointment">
-                            <div class="stat-label">Appointment Booked</div>
-                            <div class="stat-value">0</div>
-                            <div class="stat-change">Last 30</div>
-                            <button class="stat-toggle inactive"></button>
-                        </div>
-                        <div class="stat-card attendance">
-                            <div class="stat-label">Total Attendance</div>
-                            <div class="stat-value">81</div>
-                            <div class="stat-change">Last 30</div>
-                            <button class="stat-toggle inactive"></button>
-                        </div>
-                        <div class="stat-card tasks">
-                            <div class="stat-label">Tasks</div>
-                            <div class="stat-value">3</div>
-                            <div class="stat-change">Last 30</div>
-                            <button class="stat-toggle inactive"></button>
-                        </div>
-                        <div class="stat-card invoices">
-                            <div class="stat-label">Invoices</div>
-                            <div class="stat-value">3</div>
-                            <div class="stat-change">Last 30</div>
-                            <button class="stat-toggle inactive"></button>
-                        </div>
-                    </div>
-
-                    <!-- Invoice Section Header -->
-                    <div class="invoice-section-header">
-                        <div class="section-title">Invoices / Payments (0 Invoices)</div>
-                        <button class="btn-payment">
-                            <i class="fas fa-check"></i> Post Payments
-                        </button>
-                    </div>
-
-                    <!-- Filter Buttons -->
-                    <div class="filter-buttons">
-                        <button class="filter-btn active">All status</button>
-                        <button class="filter-btn">Only Paid</button>
-                        <button class="filter-btn">Only Paid</button>
-                    </div>
-
-                    <!-- Invoice Table -->
-                    <table class="invoice-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Invoice Summary</th>
-                                <th>Payments</th>
-                                <th>Amount Paid</th>
-                                <th>Amount Owed</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="invoice-date">12/17/2024</div>
-                                    <div class="invoice-date">11:23am</div>
-                                </td>
-                                <td>
-                                    <div class="invoice-details">Qty 1: Sparring Gloves</div>
-                                    <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                    <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
-                                    <div class="invoice-details-small">Payments</div>
-                                    <div class="invoice-details-small">CC Terminal 10/2/2024 - Amt $255.44</div>
-                                </td>
-                                <td></td>
-                                <td class="amount">$355.68</td>
-                                <td class="amount">$0.00</td>
-                                <td><button class="view-btn">View</button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="invoice-date">12/17/2024</div>
-                                    <div class="invoice-date">04:30am</div>
-                                </td>
-                                <td>
-                                    <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                    <div class="invoice-details-small">No payments found</div>
-                                </td>
-                                <td></td>
-                                <td class="amount">$0.00</td>
-                                <td class="amount">$21.67</td>
-                                <td><button class="view-btn">View</button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="invoice-date">12/10/2024</div>
-                                    <div class="invoice-date">03:51am</div>
-                                </td>
-                                <td>
-                                    <div class="invoice-details">Qty 1: Century Mouth Guard: Black</div>
-                                    <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                    <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
-                                    <div class="invoice-details-small">Payments</div>
-                                    <div class="invoice-details-small">CC Terminal 10/10/2024 - Amt $276.36</div>
-                                </td>
-                                <td></td>
-                                <td class="amount">$331.11</td>
-                                <td class="amount">$0.00</td>
-                                <td><button class="view-btn">View</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <!-- Pagination -->
-                    <div class="pagination-section">
-                        <div class="pagination-info">
-                            <span>Total Rows: <strong>8272.28</strong></span>
-                            <span>Total Owed: <strong>21.67</strong></span>
-                        </div>
-                        <div class="pagination-controls">
-                            <span class="pagination-nav">Prev</span>
-                            <button class="pagination-btn">1</button>
-                            <button class="pagination-btn active">2</button>
-                            <button class="pagination-btn">3</button>
-                            <button class="pagination-btn">10</button>
-                            <span class="pagination-nav">Next</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
