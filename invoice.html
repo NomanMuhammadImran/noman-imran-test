@@ -20,7 +20,7 @@
             background: #1a1f36;
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         .main-container {
@@ -36,9 +36,9 @@
             display: flex;
             flex-shrink: 0;
             flex-direction: column;
-            background: var(--color-bg-sidebar);
-            border-right: 1px solid var(--color-border-hr);
-            box-shadow: 0 3px 9px var(--color-shadow);
+            background: rgba(31, 33, 36, 1);
+            /* border-right: 1px solid var(--color-border-hr); */
+            box-shadow: 0 3px 9px rgba(31, 33, 36, 1);
             transition: width 0.4s ease;
         }
 
@@ -65,7 +65,7 @@
         }
 
         .sidebar.collapsed .header-logo {
-            opacity: 0;
+            opacity: 1;
             pointer-events: none;
         }
 
@@ -126,7 +126,8 @@
             display: flex;
             padding: 0 15px;
             white-space: nowrap;
-            background: var(--color-bg-secondary);
+            border: solid 0.5px rgba(91, 95, 123, 1);
+            background: rgba(41, 47, 55, 1);
             transition: 0.4s ease;
         }
 
@@ -173,7 +174,7 @@
             padding: 12px 15px;
             align-items: center;
             text-decoration: none;
-            color: var(--color-text-primary);
+            color: rgba(255, 255, 255, 1);
             transition: 0.3s ease;
         }
 
@@ -188,7 +189,7 @@
 
         .menu-list .menu-link:is(:hover, .active) {
             color: #fff;
-            background: var(--color-hover-primary);
+            background: rgba(19, 118, 255, 1);
         }
 
         .sidebar .sidebar-footer {
@@ -244,7 +245,7 @@
         }
 
         body.dark-theme .theme-toggle-track {
-            background: #695CFE;
+            background: rgba(19, 118, 255, 1);
         }
 
         .theme-toggle-track .theme-toggle-indicator {
@@ -323,6 +324,7 @@
 
             .site-nav {
                 display: block;
+                padding: 0;
             }
 
             .sidebar {
@@ -346,13 +348,20 @@
         }
 
         /* Profile Panel - Always Visible */
+        /* .profile-tab-main {
+            display: flex;
+            flex-wrap: wrap;
+        } */
+
         .profile-panel {
-            width: 280px;
-            background: #252d42;
+            width: 100%;
+            background: rgba(26, 27, 38, 1);
             padding: 20px;
-            border-right: 1px solid #3a4558;
+            border-right: 1px solid rgba(26, 27, 38, 1);
             overflow-y: auto;
             display: block;
+            height: calc(100% - 25px);
+            margin-bottom: 25px;
         }
 
         .profile-img {
@@ -401,7 +410,7 @@
         }
 
         .profile-btn.primary {
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
             color: #1a1f36;
         }
 
@@ -411,7 +420,7 @@
 
         .profile-btn.secondary {
             background: #0f3460;
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
             border: 1px solid #0f3460;
         }
 
@@ -429,17 +438,17 @@
         }
 
         .profile-info i {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
             width: 14px;
         }
 
         .profile-info.link {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
             cursor: pointer;
         }
 
         .profile-info.link:hover {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
         }
 
         .profile-section-divider {
@@ -475,7 +484,7 @@
         }
 
         .toggle-checkbox:checked {
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
         }
 
         .toggle-checkbox::after {
@@ -513,7 +522,7 @@
 
         .tag:hover {
             background: #4a5568;
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
         }
 
         /* Main Content */
@@ -521,17 +530,23 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* Header */
+        .search-sidearrow {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         .header {
-            background: #252d42;
+            background: rgba(13, 14, 14, 1);
             padding: 15px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #3a4558;
+            border-bottom: 1px solid rgba(33, 34, 45, 1);
         }
 
         .search-box {
@@ -557,6 +572,13 @@
         .header-icons {
             display: flex;
             gap: 15px;
+
+        }
+
+        @media screen and (max-width: 767px) {
+            .header-icons {
+                display: none;
+            }
         }
 
         .header-icon {
@@ -567,7 +589,7 @@
         }
 
         .header-icon:hover {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
         }
 
         .user-profile {
@@ -598,9 +620,13 @@
         }
 
         /* Tabs */
+        .tab-main {
+            width: 100%;
+        }
+
         .tabs-container {
-            background: #252d42;
-            border-bottom: 1px solid #3a4558;
+            background: rgba(33, 34, 45, 1);
+            border-bottom: 1px solid rgba(58, 58, 69, 1);
             display: flex;
             padding: 0 25px;
             gap: 0;
@@ -608,7 +634,7 @@
         }
 
         .tab-item {
-            color: #8892a8;
+            color: rgba(176, 176, 176, 1);
             padding: 12px 16px;
             cursor: pointer;
             font-size: 13px;
@@ -621,12 +647,12 @@
         }
 
         .tab-item:hover {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
         }
 
         .tab-item.active {
-            color: #00d4ff;
-            border-bottom-color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
+            border-bottom-color: rgba(19, 118, 255, 1);
         }
 
         .tab-icon {
@@ -643,8 +669,8 @@
 
         /* Stats Cards */
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 30px;
         }
@@ -655,6 +681,19 @@
             border-radius: 8px;
             border: 1px solid #dce8f0;
             position: relative;
+            width: calc(20% - 15px);
+        }
+
+        @media screen and (max-width:992px) {
+            .stat-card {
+                width: calc(33.33% - 15px);
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .stat-card {
+                width: calc(50% - 15px);
+            }
         }
 
         .stat-card.email-sent {
@@ -704,7 +743,7 @@
             right: 12px;
             width: 28px;
             height: 16px;
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
             border-radius: 8px;
             cursor: pointer;
             display: flex;
@@ -752,7 +791,7 @@
         }
 
         .btn-payment {
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
             color: #1a1f36;
             border: none;
             padding: 8px 16px;
@@ -789,15 +828,15 @@
         }
 
         .filter-btn.active {
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
             color: #1a1f36;
-            border-color: #00d4ff;
+            border-color: rgba(19, 118, 255, 1);
             font-weight: 600;
         }
 
         .filter-btn:hover {
-            border-color: #00d4ff;
-            color: #00d4ff;
+            border-color: rgba(19, 118, 255, 1);
+            color: rgba(19, 118, 255, 1);
         }
 
         /* Invoice Table */
@@ -806,6 +845,7 @@
             background: #252d42;
             border-radius: 8px;
             overflow: hidden;
+            min-width: 800px;
             border: 1px solid #3a4558;
         }
 
@@ -861,7 +901,7 @@
         .view-btn {
             background: none;
             border: none;
-            color: #00d4ff;
+            color: rgba(66, 145, 255, 1);
             cursor: pointer;
             font-size: 12px;
             font-weight: 600;
@@ -915,14 +955,14 @@
 
         .pagination-btn:hover {
             background: #3a4558;
-            border-color: #00d4ff;
-            color: #00d4ff;
+            border-color: rgba(19, 118, 255, 1);
+            color: rgba(19, 118, 255, 1);
         }
 
         .pagination-btn.active {
-            background: #00d4ff;
+            background: rgba(19, 118, 255, 1);
             color: #1a1f36;
-            border-color: #00d4ff;
+            border-color: rgba(19, 118, 255, 1);
         }
 
         .pagination-nav {
@@ -932,7 +972,7 @@
         }
 
         .pagination-nav:hover {
-            color: #00d4ff;
+            color: rgba(19, 118, 255, 1);
         }
 
         ::-webkit-scrollbar {
@@ -960,16 +1000,14 @@
     <!-- Site main content -->
     <div class="main-container">
         <nav class="site-nav">
-            <button class="sidebar-toggle">
-                <span class="material-symbols-rounded">menu</span>
-            </button>
+
         </nav>
-        <div class="container-fluid d-flex">
+        <div class="container-fluid d-flex px-0">
             <!-- Sidebar -->
             <aside class="sidebar collapsed">
                 <!-- Sidebar header -->
                 <div class="sidebar-header">
-                    <img src="./assets/images/sidebar-cn-logo.png" alt="CodingNepal" class="header-logo" />
+                    <img src="./assets/images/spark-logo.png" alt="CodingNepal" class="header-logo" />
                     <button class="sidebar-toggle">
                         <span class="material-symbols-rounded">chevron_left</span>
                     </button>
@@ -982,6 +1020,12 @@
                     </form>
                     <!-- Sidebar Menu -->
                     <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link active">
+                                <i class="fa-regular fa-bookmark"></i>
+                                <img src="" alt="">
+                            </a>
+                        </li>
                         <li class="menu-item">
                             <a href="#" class="menu-link active">
                                 <span class="material-symbols-rounded">dashboard</span>
@@ -1043,7 +1087,12 @@
             <div class="main-content">
                 <!-- Header -->
                 <div class="header">
-                    <input type="text" class="search-box" placeholder="Search invoices...">
+                    <div class="search-sidearrow">
+                        <button class="sidebar-toggle">
+                            <span class="material-symbols-rounded">menu</span>
+                        </button>
+                        <input type="text" class="search-box" placeholder="Search invoices...">
+                    </div>
                     <div class="header-right">
                         <div class="header-icons">
                             <i class="header-icon fas fa-user-circle"></i>
@@ -1058,197 +1107,225 @@
                         </div>
                     </div>
                 </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 px-lg-0">
+                            <div class="profile-panel">
+                                <div class="profile-img">
+                                    <!-- <i class="fas fa-user"></i> -->
+                                    <img src="./assets/images/profile-img.png" alt="profile-img">
+                                </div>
 
-                <div class="d-flex">
-                    <div class="profile-panel">
-                        <div class="profile-img">
-                            <i class="fas fa-user"></i>
-                        </div>
-    
-                        <div class="profile-name">Max Hollaway</div>
-                        <div class="profile-role">339 Fill x 35</div>
-    
-                        <div class="profile-buttons">
-                            <button class="profile-btn primary">Add Phone</button>
-                            <button class="profile-btn secondary">Edit Phone</button>
-                        </div>
-    
-                        <div class="profile-info">
-                            <i class="fas fa-phone"></i>
-                            <span>+423 (555) 0927</span>
-                        </div>
-                        <div class="profile-info">
-                            <i class="fas fa-mobile"></i>
-                            <span>Mobile Phone #2</span>
-                        </div>
-                        <div class="profile-info">
-                            <i class="fas fa-envelope"></i>
-                            <span>userymail.com</span>
-                        </div>
-                        <div class="profile-info link">
-                            <i class="fas fa-plus"></i>
-                            <span>Add new Email</span>
-                        </div>
-    
-                        <div class="profile-section-divider">
-                            <div class="personal-info-header">
-                                <label>Personal Info</label>
-                                <input type="checkbox" class="toggle-checkbox" checked>
-                            </div>
-                        </div>
-    
-                        <div class="tags-section">
-                            <span class="tag">#service-hours</span>
-                            <span class="tag">#internet-appointment</span>
-                            <span class="tag">#service-roaming</span>
-                            <span class="tag">#interested-in-single</span>
-                        </div>
-                    </div>
-                    <div>
-                        <!-- Tabs -->
-                        <div class="tabs-container">
-                            <div class="tab-item"><i class="tab-icon fas fa-user"></i> Profile</div>
-                            <div class="tab-item"><i class="tab-icon fas fa-sticky-note"></i> Notes</div>
-                            <div class="tab-item"><i class="tab-icon fas fa-comment"></i> Communication</div>
-                            <div class="tab-item"><i class="tab-icon fas fa-dumbbell"></i> Workouts</div>
-                            <div class="tab-item"><i class="tab-icon fas fa-calendar"></i> Attendance</div>
-                            <div class="tab-item active"><i class="tab-icon fas fa-file-invoice"></i> Invoice</div>
-                            <div class="tab-item"><i class="tab-icon fas fa-star"></i> Ranks</div>
-                        </div>
-                        <!-- Content -->
-                        <div class="content">
-                            <!-- Stats Cards -->
-                            <div class="stats-grid">
-                                <div class="stat-card email-sent">
-                                    <div class="stat-label">Email Sent</div>
-                                    <div class="stat-value">6</div>
-                                    <div class="stat-change">Last 30</div>
-                                    <button class="stat-toggle"></button>
+                                <div class="profile-name">Max Hollaway</div>
+                                <div class="profile-role">339 Fill x 35</div>
+
+                                <div class="profile-buttons">
+                                    <button class="profile-btn primary">Add Phone</button>
+                                    <button class="profile-btn secondary">Edit Phone</button>
                                 </div>
-                                <div class="stat-card appointment">
-                                    <div class="stat-label">Appointment Booked</div>
-                                    <div class="stat-value">0</div>
-                                    <div class="stat-change">Last 30</div>
-                                    <button class="stat-toggle inactive"></button>
+
+                                <div class="profile-info">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+423 (555) 0927</span>
                                 </div>
-                                <div class="stat-card attendance">
-                                    <div class="stat-label">Total Attendance</div>
-                                    <div class="stat-value">81</div>
-                                    <div class="stat-change">Last 30</div>
-                                    <button class="stat-toggle inactive"></button>
+                                <div class="profile-info">
+                                    <i class="fas fa-mobile"></i>
+                                    <span>Mobile Phone #2</span>
                                 </div>
-                                <div class="stat-card tasks">
-                                    <div class="stat-label">Tasks</div>
-                                    <div class="stat-value">3</div>
-                                    <div class="stat-change">Last 30</div>
-                                    <button class="stat-toggle inactive"></button>
+                                <div class="profile-info">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>userymail.com</span>
                                 </div>
-                                <div class="stat-card invoices">
-                                    <div class="stat-label">Invoices</div>
-                                    <div class="stat-value">3</div>
-                                    <div class="stat-change">Last 30</div>
-                                    <button class="stat-toggle inactive"></button>
+                                <div class="profile-info link">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add new Email</span>
+                                </div>
+
+                                <div class="profile-section-divider">
+                                    <div class="personal-info-header">
+                                        <label>Personal Info</label>
+                                        <input type="checkbox" class="toggle-checkbox" checked>
+                                    </div>
+                                </div>
+
+                                <div class="tags-section">
+                                    <span class="tag">#service-hours</span>
+                                    <span class="tag">#internet-appointment</span>
+                                    <span class="tag">#service-roaming</span>
+                                    <span class="tag">#interested-in-single</span>
                                 </div>
                             </div>
-        
-                            <!-- Invoice Section Header -->
-                            <div class="invoice-section-header">
-                                <div class="section-title">Invoices / Payments (0 Invoices)</div>
-                                <button class="btn-payment">
-                                    <i class="fas fa-check"></i> Post Payments
-                                </button>
-                            </div>
-        
-                            <!-- Filter Buttons -->
-                            <div class="filter-buttons">
-                                <button class="filter-btn active">All status</button>
-                                <button class="filter-btn">Only Paid</button>
-                                <button class="filter-btn">Only Paid</button>
-                            </div>
-        
-                            <!-- Invoice Table -->
-                            <table class="invoice-table">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Invoice Summary</th>
-                                        <th>Payments</th>
-                                        <th>Amount Paid</th>
-                                        <th>Amount Owed</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="invoice-date">12/17/2024</div>
-                                            <div class="invoice-date">11:23am</div>
-                                        </td>
-                                        <td>
-                                            <div class="invoice-details">Qty 1: Sparring Gloves</div>
-                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                            <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
-                                            <div class="invoice-details-small">Payments</div>
-                                            <div class="invoice-details-small">CC Terminal 10/2/2024 - Amt $255.44</div>
-                                        </td>
-                                        <td></td>
-                                        <td class="amount">$355.68</td>
-                                        <td class="amount">$0.00</td>
-                                        <td><button class="view-btn">View</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="invoice-date">12/17/2024</div>
-                                            <div class="invoice-date">04:30am</div>
-                                        </td>
-                                        <td>
-                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                            <div class="invoice-details-small">No payments found</div>
-                                        </td>
-                                        <td></td>
-                                        <td class="amount">$0.00</td>
-                                        <td class="amount">$21.67</td>
-                                        <td><button class="view-btn">View</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="invoice-date">12/10/2024</div>
-                                            <div class="invoice-date">03:51am</div>
-                                        </td>
-                                        <td>
-                                            <div class="invoice-details">Qty 1: Century Mouth Guard: Black</div>
-                                            <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small) Size: Small</div>
-                                            <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small) Size: Small</div>
-                                            <div class="invoice-details-small">Payments</div>
-                                            <div class="invoice-details-small">CC Terminal 10/10/2024 - Amt $276.36</div>
-                                        </td>
-                                        <td></td>
-                                        <td class="amount">$331.11</td>
-                                        <td class="amount">$0.00</td>
-                                        <td><button class="view-btn">View</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-        
-                            <!-- Pagination -->
-                            <div class="pagination-section">
-                                <div class="pagination-info">
-                                    <span>Total Rows: <strong>8272.28</strong></span>
-                                    <span>Total Owed: <strong>21.67</strong></span>
+                        </div>
+                        <div class="col-lg-9 px-lg-0">
+                            <div class="tab-main">
+                                <!-- Tabs -->
+                                <div class="tabs-container">
+                                    <div class="tab-item"><i class="tab-icon fas fa-user"></i> Profile</div>
+                                    <div class="tab-item"><i class="tab-icon fas fa-sticky-note"></i> Notes</div>
+                                    <div class="tab-item"><i class="tab-icon fas fa-comment"></i> Communication</div>
+                                    <div class="tab-item"><i class="tab-icon fas fa-dumbbell"></i> Workouts</div>
+                                    <div class="tab-item"><i class="tab-icon fas fa-calendar"></i> Attendance</div>
+                                    <div class="tab-item active"><i class="tab-icon fas fa-file-invoice"></i> Invoice
+                                    </div>
+                                    <div class="tab-item"><i class="tab-icon fas fa-star"></i> Ranks</div>
                                 </div>
-                                <div class="pagination-controls">
-                                    <span class="pagination-nav">Prev</span>
-                                    <button class="pagination-btn">1</button>
-                                    <button class="pagination-btn active">2</button>
-                                    <button class="pagination-btn">3</button>
-                                    <button class="pagination-btn">10</button>
-                                    <span class="pagination-nav">Next</span>
+                                <!-- Content -->
+                                <div class="content">
+                                    <!-- Stats Cards -->
+                                    <div class="stats-grid">
+                                        <div class="stat-card email-sent">
+                                            <div class="stat-label">Email Sent</div>
+                                            <div class="stat-value">6</div>
+                                            <div class="stat-change">Last 30</div>
+                                            <button class="stat-toggle"></button>
+                                        </div>
+                                        <div class="stat-card appointment">
+                                            <div class="stat-label">Appointment Booked</div>
+                                            <div class="stat-value">0</div>
+                                            <div class="stat-change">Last 30</div>
+                                            <button class="stat-toggle inactive"></button>
+                                        </div>
+                                        <div class="stat-card attendance">
+                                            <div class="stat-label">Total Attendance</div>
+                                            <div class="stat-value">81</div>
+                                            <div class="stat-change">Last 30</div>
+                                            <button class="stat-toggle inactive"></button>
+                                        </div>
+                                        <div class="stat-card tasks">
+                                            <div class="stat-label">Tasks</div>
+                                            <div class="stat-value">3</div>
+                                            <div class="stat-change">Last 30</div>
+                                            <button class="stat-toggle inactive"></button>
+                                        </div>
+                                        <div class="stat-card invoices">
+                                            <div class="stat-label">Invoices</div>
+                                            <div class="stat-value">3</div>
+                                            <div class="stat-change">Last 30</div>
+                                            <button class="stat-toggle inactive"></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Invoice Section Header -->
+                                    <div class="invoice-section-header">
+                                        <div class="section-title">Invoices / Payments (0 Invoices)</div>
+                                        <button class="btn-payment">
+                                            <i class="fas fa-check"></i> Post Payments
+                                        </button>
+                                    </div>
+
+                                    <!-- Filter Buttons -->
+                                    <div class="filter-buttons">
+                                        <button class="filter-btn active">All status</button>
+                                        <button class="filter-btn">Only Paid</button>
+                                        <button class="filter-btn">Only Paid</button>
+                                    </div>
+
+                                    <!-- Invoice Table -->
+                                    <div class="table-responsive">
+                                        <table class="invoice-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Invoice Summary</th>
+                                                    <th>Payments</th>
+                                                    <th>Amount Paid</th>
+                                                    <th>Amount Owed</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="invoice-date">12/17/2024</div>
+                                                        <div class="invoice-date">11:23am</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="invoice-details">Qty 1: Sparring Gloves</div>
+                                                        <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small)
+                                                            Size:
+                                                            Small
+                                                        </div>
+                                                        <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small)
+                                                            Size:
+                                                            Small
+                                                        </div>
+                                                        <div class="invoice-details-small">Payments</div>
+                                                        <div class="invoice-details-small">CC Terminal 10/2/2024 - Amt
+                                                            $255.44
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td class="amount">$355.68</td>
+                                                    <td class="amount">$0.00</td>
+                                                    <td><button class="view-btn">View</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="invoice-date">12/17/2024</div>
+                                                        <div class="invoice-date">04:30am</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small)
+                                                            Size:
+                                                            Small
+                                                        </div>
+                                                        <div class="invoice-details-small">No payments found</div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td class="amount">$0.00</td>
+                                                    <td class="amount">$21.67</td>
+                                                    <td><button class="view-btn">View</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="invoice-date">12/10/2024</div>
+                                                        <div class="invoice-date">03:51am</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="invoice-details">Qty 1: Century Mouth Guard: Black
+                                                        </div>
+                                                        <div class="invoice-details">Qty 1: Black Hyper T-Shirt(Small)
+                                                            Size:
+                                                            Small
+                                                        </div>
+                                                        <div class="invoice-details">Qty 1: White Hyper T-Shirt(Small)
+                                                            Size:
+                                                            Small
+                                                        </div>
+                                                        <div class="invoice-details-small">Payments</div>
+                                                        <div class="invoice-details-small">CC Terminal 10/10/2024 - Amt
+                                                            $276.36
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td class="amount">$331.11</td>
+                                                    <td class="amount">$0.00</td>
+                                                    <td><button class="view-btn">View</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="pagination-section">
+                                        <div class="pagination-info">
+                                            <span>Total Rows: <strong>8272.28</strong></span>
+                                            <span>Total Owed: <strong>21.67</strong></span>
+                                        </div>
+                                        <div class="pagination-controls">
+                                            <span class="pagination-nav">Prev</span>
+                                            <button class="pagination-btn">1</button>
+                                            <button class="pagination-btn active">2</button>
+                                            <button class="pagination-btn">3</button>
+                                            <button class="pagination-btn">10</button>
+                                            <span class="pagination-nav">Next</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
