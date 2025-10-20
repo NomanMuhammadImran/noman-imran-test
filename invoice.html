@@ -416,6 +416,11 @@
             margin-bottom: 10px;
         }
 
+        .profile-buttons .profile-btn img {
+           width: 20px;
+           height: 20px;
+        }
+
         .profile-btn {
             flex: 1;
             padding: 8px;
@@ -645,6 +650,66 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            transition: 0.3s all;
+        }
+
+        .header-icons a img {
+            transition: 0.3s all;
+        }
+
+        .header-icons a img:hover {
+            padding: 5px;
+            border-radius: 4px;
+            border: solid 1px rgba(58, 58, 69, 1);
+            background-color: rgba(58, 58, 69, 1);
+
+        }
+
+        .dark-mode-icon-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: solid 1px rgba(58, 58, 69, 1);
+            background-color: rgba(33, 34, 45, 1);
+            width: 96px;
+            height: 48px;
+        }
+
+        .dark-mode-icon-main a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s all;
+            border-radius: 4px;
+        }
+
+        .dark-mode-icon-main a:hover {
+            background-color: rgba(58, 58, 69, 1);
+            padding: 8px;
+        }
+
+        .dark-mode-icon-main a:hover img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .dark-mode-icon-main a img {
+            width: 24px;
+            height: 24px;
+            transition: 0.3s all;
+        }
+
+        .dark-mode-icon-main a.active {
+            background-color: rgba(58, 58, 69, 1);
+            padding: 8px;
+        }
+
+        .dark-mode-icon-main a.active img {
+            width: 20px;
+            height: 20px;
         }
 
         @media screen and (max-width: 767px) {
@@ -803,13 +868,14 @@
         .stat-card-flex {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px;
+            gap: 10px;
         }
 
         .stat-card-flex img {
-           width: 20px;
-           height: 20px;
+            width: 20px;
+            height: 20px;
         }
 
         .stat-label {
@@ -1011,7 +1077,7 @@
             color: #B0B0B0;
             line-height: 1.4;
         }
-        
+
         .invoice-details {
             color: #B0B0B0;
             line-height: 1.5;
@@ -1024,6 +1090,7 @@
             font-weight: 500;
             color: #8892a8;
         }
+
         .invoice-details-small-bold {
             font-size: 14px;
             font-weight: 700;
@@ -1066,7 +1133,7 @@
             color: #8892a8;
             font-size: 12px;
             border: 1px solid #3a4558;
-            
+
         }
 
         @media screen and (max-width: 600px) {
@@ -1078,6 +1145,10 @@
         .pagination-info {
             display: flex;
             gap: 15px;
+        }
+
+        .pagination-info span strong {
+            color: #fff;
         }
 
         .pagination-controls {
@@ -1110,7 +1181,7 @@
 
         .pagination-btn.active {
             background: rgba(19, 118, 255, 1);
-            color: #1a1f36;
+            color: #fff;
             border-color: rgba(19, 118, 255, 1);
         }
 
@@ -1275,6 +1346,14 @@
                                 <img src="./assets/images/clock-icon.svg" alt="clock-icon">
                             </a>
                         </div>
+                        <div class="dark-mode-icon-main">
+                            <a class="active" href="">
+                                <img src="./assets/images/moon-icon.svg" alt="moon-icon">
+                            </a>
+                            <a href="">
+                                <img src="./assets/images/sun-icon.svg" alt="sun-icon">
+                            </a>
+                        </div>
                         <div class="user-profile">
                             <div class="user-avatar">SN</div>
                             <span class="user-name">Savannah Nguyen</span>
@@ -1283,7 +1362,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-4 px-lg-0">
+                        <div class="col-lg-3 px-lg-0">
                             <div class="profile-panel">
                                 <div class="profile-img">
                                     <img src="./assets/images/profile-img.png" alt="profile-img">
@@ -1400,7 +1479,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 px-lg-0">
+                        <div class="col-lg-9 px-lg-0">
                             <div class="tab-main">
                                 <!-- Tabs -->
                                 <div class="tabs-container">
@@ -1447,7 +1526,7 @@
                                                 </div>
                                             </div>
                                             <div class="stat-card attendance">
-                                               <div class="stat-card-flex">
+                                                <div class="stat-card-flex">
                                                     <div>
                                                         <div class="stat-label">Total Attendance</div>
                                                         <!-- <div class="stat-change">Last 30</div> -->
@@ -1731,9 +1810,10 @@
                                                 </div>
                                                 <div class="pagination-controls">
                                                     <span class="pagination-nav">Prev</span>
-                                                    <button class="pagination-btn">1</button>
-                                                    <button class="pagination-btn active">2</button>
+                                                    <button class="pagination-btn active">1</button>
+                                                    <button class="pagination-btn">2</button>
                                                     <button class="pagination-btn">3</button>
+                                                    <button class="pagination-btn">...</button>
                                                     <button class="pagination-btn">10</button>
                                                     <span class="pagination-nav">Next</span>
                                                 </div>
