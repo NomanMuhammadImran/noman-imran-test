@@ -16,4 +16,22 @@
   --color-shadow: rgba(0, 0, 0, 0.05);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-main {
+  position: relative;
+}
+.admin-main .sidebar-main {
+  background-color: #1F2124;
+  padding: 20px 4px;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
