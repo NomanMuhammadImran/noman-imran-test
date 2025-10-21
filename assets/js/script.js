@@ -3,6 +3,9 @@ const sidebarToggleBtns = document.querySelectorAll(".sidebar-toggle");
 const sidebar = document.querySelector(".sidebar");
 const searchForm = document.querySelector(".search-form");
 const menuLinks = document.querySelectorAll(".menu-link");
+
+sidebar.classList.add("collapsed");
+
 sidebarToggleBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
@@ -15,7 +18,7 @@ searchForm.addEventListener("click", () => {
     searchForm.querySelector("input").focus();
   }
 });
-if (window.innerWidth > 768) sidebar.classList.remove("collapsed");
+// if (window.innerWidth > 768) sidebar.classList.remove("collapsed");
 
 
 $(".personal-toggle").on("click", function () {
